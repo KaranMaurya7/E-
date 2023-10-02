@@ -1,0 +1,113 @@
+.displayFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+.displayFlexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile {
+    display: none;
+    text-align: center;
+    z-index: 5;
+    width: 95%;
+    min-width: 5rem;
+    position: absolute;
+    top: 6rem;
+    left: 2%;
+    animation: diagonal-slide 1s ;
+    background-color: rgba(196, 249, 208, 0.904);
+    border-radius: 10px 10px;
+}
+
+.display {
+    display: block !important;
+}
+
+.alignContent {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    position: relative;
+    width: 95vw;
+    min-width: 20rem;
+    max-width: 85rem;
+    height: 5rem;
+    margin: auto;
+    margin-top: 0.5rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 0 2rem;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.name {
+    cursor: pointer;
+    color: rgb(2, 71, 2);
+    margin-left: 3rem;
+
+}
+
+.leftNav {
+    width: 40%;
+}
+
+.mobileLeftNav {
+    /* border: 1px solid black; */
+    text-align: right;
+    /* margin: auto; */
+    margin-left: 1rem;
+    width:15%;
+}
+
+.link {
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.link:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+@keyframes diagonal-slide {
+    0% {
+        left: 100%;
+    }
+
+    90% {
+        left: 0%;
+
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .leftNav {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    .display {
+        display: none !important;
+    }
+}

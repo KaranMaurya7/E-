@@ -1,0 +1,236 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 75vw;
+    min-width: 20rem;
+    margin: auto;
+    margin-left: 15rem;
+    padding-bottom: 10rem;
+    position: relative;
+}
+
+.topPadding{
+    padding-top: 5rem;
+}
+
+.card {
+    border-radius: 10px;
+    height: 29rem;
+    width: 19rem;
+    padding: 1rem;
+
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
+}
+
+.imageDiv {
+    /* border: 2px solid black; */
+    width: 70%;
+    height: 63%;
+    margin: auto;
+
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.textLeft {
+    padding-left: 1rem;
+    text-align: left;
+    height: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+ 
+}
+.extra{
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.textLeft span{
+    font-size: larger;
+    font-weight: 600;
+}
+
+.nonBold {
+    font-weight: 500;
+}
+
+.button {
+    height: 2.5rem;
+    font-size: larger;
+    background-color: aquamarine;
+    border: none;
+    outline: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    transition: 0.3s all ease-in-out;
+}
+.colorRed{
+    color: white;
+    background-color: rgb(218, 17, 17);
+}
+
+.button:hover {
+    transform: scale(0.9);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+}
+
+
+
+
+.filter {
+    position: fixed;
+    height: 15rem;
+    width: 12%;
+    background-color: rgb(178, 237, 209);
+    top: 25%;
+    left: 1%;
+    box-shadow: 0px 4px 8px -2px rgba(9, 30, 66, 0.25), 0px 0px 0px 1px rgba(9, 30, 66, 0.08);
+    border-radius: 10px;
+    padding: 2rem 0.5rem;
+}
+.filter label{
+    font-size: large;
+}
+.filter select{
+    margin-top: 1rem;
+    background:transparent;
+    border: 2px solid rgb(84, 73, 116);
+    width: 90%;
+    height: 30px;
+    font-size:medium;
+}
+.filter select option{
+    background: transparent;
+    color: #5d5959;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);  
+}
+select option[value="None"] {
+    background: rgba(100, 100, 100, 0.3);
+  }
+  
+  select option[value="men's%20clothing"] {
+    background: rgba(125, 150, 150, 0.3);
+  }
+  
+  select option[ value="women's%20clothing"] {
+    background: rgba(150, 175, 200, 0.3);
+  }
+  
+  select option[value="jewelery"] {
+    background: rgba(175, 200, 250, 0.3);
+  }
+  
+  
+  select option[value="electronics"] {
+    background: rgba(200, 225, 250, 0.3);
+  }
+  
+
+.purchase{
+    position: fixed;
+    height: 10rem;
+    width: 12%;
+    background-color: rgb(178, 235, 237);
+    top: 25%;
+    left: 1%;
+    box-shadow: 0px 4px 8px -2px rgba(9, 30, 66, 0.25), 0px 0px 0px 1px rgba(9, 30, 66, 0.08);
+    border-radius: 10px;
+    padding: 2rem 0.5rem;
+
+}
+
+.contain {
+    display: block;
+    position: relative;
+    padding-left: 10px;
+    text-align: left;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.contain input[type="checkbox"] {
+    font: inherit;
+    width: 1em;
+    height: 1em;
+}
+
+.search {
+    width: 30%;
+    /* border: 1px solid black; */
+    height: 3rem;
+    padding: 2rem;
+    margin: auto;
+}
+
+.search input {
+    width: 80%;
+    height: 3rem;
+    border-radius: 30px;
+    padding: 0 1rem;
+    font-size: larger;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.search input:focus {
+    outline: 2px solid purple;
+}
+
+
+@media screen and (max-width : 1000px){
+    .container{
+        gap: 1rem;
+        margin: auto;
+        margin-left: 5rem;
+    }
+    .filter{
+        display: none;
+    }
+    .card{
+        width: 15rem;
+        height: 20rem;
+        font-size: small;
+    }
+    .button{
+        width: 10rem;
+        height: 2rem;
+    }
+    .imageDiv {
+        /* border: 2px solid black; */
+        width: 70%;
+        height: 50%;
+        margin: auto;
+    }
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+@media screen and (max-width: 500px){
+    .card{
+        width: 12rem;
+        height: 15rem;
+        font-size: small;
+    }
+    .container{
+        gap: 1rem;
+        margin: auto;
+        margin-left: 3.5rem;
+    }
+    .button{
+        width: 9rem;
+        height: 1.7rem;
+    }
+}

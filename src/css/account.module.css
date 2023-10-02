@@ -1,0 +1,89 @@
+.displayFLex {
+    display: flex;
+}
+
+.container {
+    padding: 1rem 0;
+    width: 30%;
+    height: 30rem;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: rgb(186, 237, 237);
+    box-shadow: 0px 12px 28px 0px rgba(140, 149, 159, 0.3);
+    border-radius: 10px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    gap: 2rem
+}
+
+form input {
+    width: 90%;
+    height: 4rem;
+    font-size: larger;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0 1rem;
+}
+
+form button {
+    width: 98%;
+    height: 3rem;
+    border-radius: 3rem;
+    font-size: x-large;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s all ease-in-out;
+}
+
+form input:focus {
+    outline: 2px solid rgb(17, 141, 141)
+}
+
+form button:hover {
+    transform: scale(0.95);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.container p{
+    font-size: large;
+    cursor: pointer;
+}
+
+.profile{
+    width: 40%;
+    height: 15rem;
+    padding: 2rem;
+    background-color: rgb(168, 244, 182);
+    margin: auto;
+    margin-top: 2rem;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0px 12px 28px 0px rgba(140, 149, 159, 0.3);
+}
+.profile span{
+    color: brown;
+}
+
+.profile button{
+    width: 10rem;
+    height: 3rem;
+    font-size: larger;
+    border: none;
+    border-radius: 3rem;
+    background-color: rgb(3, 209, 3);
+    color: white;
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.profile button:hover{
+    transform: scale(0.95);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
