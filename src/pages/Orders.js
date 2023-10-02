@@ -14,7 +14,7 @@ export function Orders({userId}){
             dispatch(fetchOrderFromFirebase(userId.email))
             console.log(orders);
         }
-    }, [dispatch, orders])
+    }, [dispatch, orders, userId])
 
     // remdering of elements
     return(

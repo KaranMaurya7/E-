@@ -32,7 +32,7 @@ function App() {
   const dispatch = useDispatch();
   const user = useSelector(authSelector);
   const [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("green");
+  let color = "green";
 
   //checking user login
   useEffect(() => {
@@ -48,7 +48,7 @@ function App() {
         }, 2000);
       }
     })
-  }, []);
+  }, [dispatch]);
 
   // checking user login authentication and protecting cart and orders if not login
   const Protected = ({ children }) => {

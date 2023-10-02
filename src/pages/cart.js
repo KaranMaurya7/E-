@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import style from '../css/home.module.css'
-import { cartSelector, fetchFromFirebase, fetchDeleteItem, clearCart } from "../redux/cartReducers";
+import { cartSelector, fetchFromFirebase, fetchDeleteItem } from "../redux/cartReducers";
 import { useEffect, useState } from "react";
 import { addOrderItem } from "../redux/orderReducer";
 import { addDoc, collection } from "firebase/firestore";
@@ -22,7 +22,7 @@ export function Cart({ userId }) {
         //     // Clear cart items when the component unmounts
         //     dispatch(clearCart());
         // };
-    }, [dispatch, cart])
+    }, [dispatch, cart, userId.email])
 
     // Calculating total cart items prices
     useEffect(() => {
@@ -32,7 +32,7 @@ export function Cart({ userId }) {
         if (cart.length !== 0) {
             let sum = 0;
             cart.map((item) => {
-                sum += parseFloat(item.price) * parseFloat(item.quantity);
+                return sum += parseFloat(item.price) * parseFloat(item.quantity);
             });
             sum = Math.round(sum * 10) / 10
             setTotal(sum);
